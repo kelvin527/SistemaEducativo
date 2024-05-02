@@ -1,12 +1,22 @@
-﻿namespace EstudiantePrueba.Repositorio
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace EstudiantePrueba.Repositorio
 {
-    public class InformacionBasica : IInformacionBasica
+    public class InformacionBasica 
     {
-        public int Id { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string Nombre { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string Apellido { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public int Edad { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string Direccion { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public bool Sexo { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public int Id { get; set; }
+        [Required]
+        [MaxLength(150)]
+        public string Nombre { get; set; }
+        [Required]
+        [MaxLength(200)]
+        public string Apellido { get; set; }
+        [Required]
+        public int Edad { get; set; }
+        [Required]
+        [MaxLength(200)]
+        public string Direccion { get; set; }
+        [Required]
+        public int Sexo { get; set; }
     }
 }

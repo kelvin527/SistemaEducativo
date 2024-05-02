@@ -1,4 +1,6 @@
-﻿namespace EstudiantePrueba.Entidades
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace EstudiantePrueba.Entidades
 {
     public class Calificacion
     {
